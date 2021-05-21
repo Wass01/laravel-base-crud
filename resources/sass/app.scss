@@ -1,1 +1,13 @@
-//
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  .card-child{
+    width: calc(100% / 6 - 20px);
+  }
+}
