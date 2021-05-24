@@ -10,5 +10,10 @@
     <a href="{{route('comics.edit',['comic' => $comic->id])}}">Edit</a>
     <a href="{{route('comics.index')}}">torna alla lista</a>
     <a href="/">torna home</a>
+    <form action="{{route('comics.destroy',['comic'=>$comic->id])}}" method="post">
+      @csrf
+      @method('DELETE')
+      <input class="delete" onclick="return confirm('sicuro di voler eliminare questo elemento')" type="submit" value="DELETE">
+    </form>
 
 @endsection
